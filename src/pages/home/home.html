@@ -1,17 +1,17 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>Home</ion-title>
-  </ion-navbar>
-</ion-header>
 
-<ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+
+<ion-content class="bg" no-bounce>
+  <h1>CHOOSE YOUR FAVORITE SONG: </h1>
+  <ion-list class="list" no-lines>
+      <ion-item no-lines class="item" *ngFor = "let song of songList | async; let i = index">
+        <div class="left">
+            <h3 class="ime">{{song.ime}}</h3>
+            <p class="izvodjac">{{song.izvodjac}}</p>
+        </div>
+        <div class="right">
+            <img src="{{song.ikona}}" alt="" class="icon" (click) = "addSong(song.ime, song.izvodjac, song.pjesma, i, song)">
+        </div>
+      </ion-item>
+    </ion-list>
+  
 </ion-content>

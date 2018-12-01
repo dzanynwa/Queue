@@ -38,10 +38,13 @@ $colors: (
   secondary:  #32db64,
   danger:     #f53d3d,
   light:      #f4f4f4,
-  dark:       #222
+  dark:       #222,
+  queue:      rgb(0, 180, 219)
 );
 
 
+$tabs-tab-color-active: color($colors, queue);
+$tabs-background: color($colors, dark);
 // App iOS Variables
 // --------------------------------------------------
 // iOS only Sass variables can go here

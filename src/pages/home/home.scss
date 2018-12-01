@@ -1,3 +1,86 @@
 page-home {
-
+    .bg{
+        background-color: rgb(0, 0, 0) !important;
+        overflow: hidden;
+    }
+    .scroll-content{
+        overflow: hidden;
+    }
+    *{
+        font-family: 'Ubuntu', sans-serif;
+    }
+    ion-content{
+        text-align: center;
+    }    
+    h1{
+        color: rgb(0, 180, 219);
+        font-weight: bold;
+        font-size: 20px;
+        text-align: center;
+    }
+    .logo{
+        height: 200px;
+        margin-top: 5px;
+    }
+    .message{
+        color: rgb(0, 180, 219);
+        font-weight: bold;
+        font-size: 20px;
+        margin-top: 15px;
+        border-top: 3px solid rgb(0, 180, 219);
+        border-bottom: 3px solid rgb(0, 180, 219);
+        padding: 10px;
+    }
+    .social{
+        color: rgb(0, 180, 219);
+        font-weight: bold;
+        font-size: 20px;
+        margin-top: 25px;
+    }
+    .button{
+        width: 250px;
+        height: 50px;
+        border-radius: 25px;
+        border: 3px solid rgb(0, 180, 219);
+        margin-top: 15px;
+        background-color: black;
+        color: rgb(0, 180, 219);
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .left{
+        width: 60%;
+        float: left;
+    }
+    .right{
+        width: 30%;
+        float: right;
+    }
+    .icon{
+        height: 40px;
+        margin-left: 45%;
+    }
+    .list{
+        background-color: black;
+        padding: 5px;
+        border-top: 10px solid rgb(0, 180, 219);
+        max-height: 93%;
+        overflow-y: scroll;
+        border-color: rgb(0, 180, 219);
+    }
+    .item{
+        background-color: black;
+        border-color: rgb(0, 180, 219);
+    }
+    .ime{
+        color: rgb(0, 180, 219);
+        font-weight: bold;
+        font-size: 16px;
+    }
+    p{
+        color: white;
+    }
+    .izvodjac{
+        color: white;
+    }
 }
