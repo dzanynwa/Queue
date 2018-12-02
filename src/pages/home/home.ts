@@ -16,16 +16,20 @@ export class HomePage {
   
 
   constructor(public navCtrl: NavController, private db: AngularFirestore, public navParams: NavParams) {
-    this.songListRef = this.db.collection('ArgCigPL'); 
+    this.songListRef = this.db.collection('Songs'); 
     this.songList = this.songListRef.valueChanges();  
   }
 
 
-  addSong(ime: string, izvodjac : string, pjesma: string, i, song : Song[]) {
+  addSong(ime: string, izvodjac : string, pjesma: string) {
     const createdAt = new Date();
     this.db.collection("Songs2").add({ pjesma, createdAt, ime, izvodjac });
-    song[i].ikona = '../assets/imgs/visited.png';
-    console.log(i);
+    
+    
+  }
+
+  deleteSong(song: Song){
+    
   }
 
   ionViewDidLoad() {
