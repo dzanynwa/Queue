@@ -1,7 +1,7 @@
 
 
 <ion-content class="bg" no-bounce>
-  <h1>CHOOSE YOUR FAVORITE SONG: </h1>
+  <h1>PICK A SONG: </h1>
   <ion-list class="list" no-lines>
       <ion-item no-lines class="item" *ngFor = "let song of songList | async; let i = index">
         <div class="left">
@@ -9,7 +9,8 @@
             <p class="izvodjac">{{song.izvodjac}}</p>
         </div>
         <div class="right">
-            <img src="../assets/imgs/add.png" alt="" class="icon" (click) = "addSong(song.ime, song.izvodjac, song.pjesma)">
+            <img *ngIf = "!hide" src="../assets/imgs/add.png" alt="" class="icon" (click) = "addSong(song.ime, song.izvodjac, song.pjesma, song.$key)">
+            <img *ngIf = "hide" src="../assets/imgs/add.png" alt="" class="icon" (click) = "addSong2(song.ime, song.izvodjac, song.pjesma, song.$key)">
         </div>
       </ion-item>
     </ion-list>

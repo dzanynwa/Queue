@@ -17,7 +17,7 @@ export class AboutPage {
     songListRef: AngularFirestoreCollection<Song>;
 
     constructor(public navCtrl: NavController, private db: AngularFirestore, public navParams: NavParams) {
-      this.songListRef = this.db.collection('Songs2'); 
+      this.songListRef = this.db.collection<Song>('Songs', ref => ref.orderBy('createdAt'));
       this.songList = this.songListRef.valueChanges();
     }
 

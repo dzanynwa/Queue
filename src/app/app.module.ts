@@ -2,10 +2,11 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
-import { AngularFirestore } from '@angular/fire/firestore';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from "angularfire2/database";
 import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { CookieService } from 'ngx-cookie-service';
+
 
 import { AboutPage } from '../pages/about/about';
 import { HomePage } from '../pages/home/home';
@@ -14,6 +15,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { WelcomePage } from '../pages/welcome/welcome';
+
 
 var config = {
   apiKey: "AIzaSyAl-815sUp6sKW8pCzYtW6o4u5_wN2kW10",
@@ -49,6 +51,7 @@ var config = {
   ],
   providers: [
     StatusBar,
+    CookieService,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]

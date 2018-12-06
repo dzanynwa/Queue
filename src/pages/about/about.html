@@ -3,9 +3,9 @@
     <ion-list class="list" no-lines>
         <ion-item no-lines class="item" *ngFor = "let song of songList | async; let i = index">
           <div class="left">
-              <h3 class="ime">{{song.ime}}</h3>
+              <h3 class="ime">{{(i + 1)}}. {{song.ime}}</h3>
               <p class="izvodjac">{{song.izvodjac}}</p>
           </div>
-        </ion-item>
+        </ion-item>  
       </ion-list>
   </ion-content>
